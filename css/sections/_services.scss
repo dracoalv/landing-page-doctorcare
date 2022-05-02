@@ -31,3 +31,39 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  #services-section {
+    width: 100%;
+    padding-top: 218px;
+    padding-bottom: 100px;
+    top: -218px;
+
+    .services-text {
+      margin: 100px auto 60px auto;
+
+      .subtitle {
+        font-size: 30px;
+      }
+    }
+
+    .services-cards {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #services-section {
+    width: 100%;
+    padding-bottom: 100px;
+
+    .services-text {
+      margin: 100px auto 60px auto;
+    }
+
+    .services-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+}

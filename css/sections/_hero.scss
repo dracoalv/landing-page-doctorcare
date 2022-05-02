@@ -40,7 +40,7 @@
     border-radius: 6px;
 
     position: relative;
-    top: -52px;
+    top: 0px;
     z-index: 2;
 
     box-shadow: 0px 4px 64px rgba(15, 10, 31, 0.1);
@@ -66,6 +66,48 @@
         .number-span {
           font-size: 16px;
           color: var(--brand-purple-light);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #hero-section {
+    width: 100%;
+
+    .hero-content {
+      flex-direction: column;
+      margin-top: 40px;
+
+      .hero-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 60px;
+
+        .title {
+          font-size: 34px;
+        }
+      }
+
+      .hero-image {
+        margin-right: 0;
+      }
+    }
+
+    .hero-numbers {
+      padding: 40px 72px;
+
+      .hero-numbers-content {
+        flex-direction: column;
+        gap: 60px;
+
+        .divider-vertical {
+          display: none;
+          transform: rotate(90deg);
         }
       }
     }

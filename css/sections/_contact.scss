@@ -30,3 +30,22 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  #contact-section {
+    padding: 50px 0 100px 0;
+
+    .contact-content {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 60px;
+
+      .contact-text {
+
+        .subtitle {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}

@@ -6,3 +6,9 @@
   padding: 0 123px;
   margin: 0 auto;
 }
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 0 20px;
+  }
+}
