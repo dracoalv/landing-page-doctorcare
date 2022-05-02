@@ -1,0 +1,20 @@
+// base
+@import 'base/reset';
+@import 'base/grid';
+@import 'base/variables';
+@import 'base/typography';
+
+// components
+@import 'components/buttons';
+@import 'components/header';
+@import 'components/footer';
+
+// sections
+@import 'sections/hero';
+@import 'sections/services';
+@import 'sections/testimonials';
+@import 'sections/about';
+@import 'sections/contact';
+
+// libs
+@import 'libs/swiper';
