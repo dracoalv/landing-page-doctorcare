@@ -32,6 +32,7 @@
 
       .header-list-item {
         width: 100%;
+        display: block;
         padding: 12px;
         opacity: .6;
 
@@ -62,7 +63,7 @@
       
     }
 
-    .social-icons {
+    .network-icons {
       display: none;
     }
 
@@ -79,7 +80,59 @@
     .header-nav {
 
       .header-ul {
-        display: none;
+        visibility: hidden;
+        position: fixed;
+        right: -100vw;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        // justify-content: center;
+        align-items: flex-start;
+        
+        top: calc(72px);
+        right: -100vw;
+        z-index: 998;
+
+        width: 100vw;
+        height: 100vh;
+        padding-top: 20px;
+        background: var(--brand-purple);
+        transition: all 350ms ease-in-out;
+
+        .header-list-item {
+          padding: 20px 20px;
+          display: block;          
+          border-top: 1px solid var(--gray-white);
+          opacity: 1;
+
+          &:last-child {
+            border-bottom: 1px solid var(--gray-white);
+          }
+
+          &.active {
+            width: 100%;
+
+            a {
+              color: var(--gray-white);
+            }
+    
+            &.active {
+              font-weight: 700;
+              opacity: 1;
+            }
+    
+            &.active::after {
+              content: '';
+              display: none;
+            }
+          }
+        }
+
+        &.show {
+          right: 0;
+          visibility: visible;
+          transition: all 350ms ease-in-out;
+        }
       }
 
       .header-btn-cta {
@@ -103,6 +156,7 @@
           background: var(--brand-purple);
 
           position: relative;
+          transition: width 150ms ease-in-out;
 
           &::before {
             content: '';
@@ -113,17 +167,37 @@
             width: 24px;
             height: 3px;
             background: var(--brand-purple);
+            transition: transform 250ms ease-in-out;
           }
 
           &::after {
             content: '';
             position: absolute;
             bottom: -8px;
-            right: 0;
+            left: 0;
 
             width: 24px;
             height: 3px;
             background: var(--brand-purple);
+            transition: transform 250ms ease-in-out;
+          }
+        }
+
+        &.active {
+          span {
+            width: 0px;
+
+            &::before {
+              top: 0;
+              left: 0;
+              transform: rotate(-225deg);
+            }
+
+            &::after {
+              top: 0;
+              left: 0;
+              transform: rotate(225deg);
+            }
           }
         }
       }
